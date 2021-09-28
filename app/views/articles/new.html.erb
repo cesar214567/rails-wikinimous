@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center">
+  <div>
+    <%= form_for(@article,:class => 'row g-3') do |f| %>
+    <%= f.label :title, :class => 'form-label',:style => "font-size:40px"%>
+    <%= f.text_field :title, :class => "form-control"%>
+    <%= f.label :content , :class => 'form-label'%>
+    <%= f.text_area :content, :class => "form-control ",:style => "width: 724px; height: 200px;", data: {editor: "markdown", extension: 'MD'}, rows: 15 %>
+    <%= f.submit :class => 'btn btn-primary mb-3' %>
+  <% end %>
+  </div>
+
+</div>

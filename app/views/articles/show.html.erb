@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center">
+  <div class="col-4">
+    <h1>
+      <%= @article.title %>
+      <%= link_to '✏️', edit_article_path(@article) ,:style =>"text-decoration:none; font-size:17px" %>
+      <%= link_to '🗑️', article_path(@article),:style =>"text-decoration:none;font-size:17px", :method => "delete" %>
+    </h1>
+    <hr>
+    <article>
+      <%= @article.content %>
+    </article>
+  </div>
+
+</div>
